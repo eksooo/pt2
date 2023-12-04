@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+nav ul {
+    background: blue;
+    position: fixed;
+    min-height: 6vh;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    font-size: 30px;
+}
+nav li{
+    list-style: none;
+    position: relative;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+}
+li::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    background-color: white;
+    transition: 0.3s;
+    transform-origin: left;
+}
+li:hover::after {
+    transform: scaleX(1);
+}
+section {
+    min-height: 100dvh;
+}
+.headline-container {
+    background: url(UAAP.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.headline-container div {
+    position: absolute;
+    bottom: 0;
+    font-size: 50px;
+    text-align: justify;
+    color: white;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+    background-attachment: fixed;
+    padding: 20px;
+}
+.headline-container h3 {
+    font-size: 30px;
+}
+.news-container {
+    font-size: 20px;
+    padding: 70px 50px 30px 50px;
+    background-color: white;
+    border-left: 10px solid blue;
+    margin: 1rem;
+}
+.news2::before {
+    content: 'Like Last Year?';
+    font-weight: bold;
+    display: block;
+    font-size: 30px;
+}
+.source-container {
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    padding: 30px;
+    background: url(UAAP.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.source-container h1{
+    text-align: center;
+}
+.source-container a{
+    text-decoration: none;
+    color: white;
+}
+.source-container div {
+    backdrop-filter: blur(20px);
+    background-color: rgba(0,0,0,0.5);
+    border: 3px solid black;
+    padding: 16px;
+    margin: 30px;
+}
+@media (min-width:1440px) {
+    .news-container {
+        font-size: 30px;
+    }
+}
+@media (max-width:768px) {
+    .headline-container {
+    background-position: center;
+    }
+    .headline-container div {
+        font-size: 35px;
+    }
+    .headline-container h3 {
+        font-size: 20px;
+    }
+}
+@media (max-width:425px) {
+    .headline-container div {
+        font-size: 25px;
+    }
+    .headline-container h3 {
+        font-size: 10px;
+    }
+    nav ul {
+        font-size: 20px;
+    }
+}
+@media (max-width:375px) {
+    .source-container {
+        font-size: 15px;
+    }
+}
+@media (max-width:375px) {
+    .source-container {
+        font-size: 15px;
+    }
+}
+@media (max-width:320px) {
+    .source-container {
+        font-size: 10px;
+    }
+}
